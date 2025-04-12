@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putString("edad",edad);
             editor.putString("categoria",categoria);
             editor.commit();
-            Intent i = new Intent(MainActivity.this, DeporteActivity.class, MusicaActivity.class, CineActivity.class);
+            Intent i = new Intent(MainActivity.this, SplashScreen.class);
             startActivity(i);
 
         }else{
