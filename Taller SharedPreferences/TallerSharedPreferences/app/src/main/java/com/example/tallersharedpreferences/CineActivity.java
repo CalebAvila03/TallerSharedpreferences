@@ -32,4 +32,7 @@ public class CineActivity extends AppCompatActivity {
         });
 
     }
+
+
 }
+
