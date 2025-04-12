@@ -1,7 +1,10 @@
 package com.example.tallersharedpreferences;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,10 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class DeporteActivity extends AppCompatActivity {
 
-    public static final String dataUserCache = "dataUser";
-    private static final int  mode_Private = Context.MODE_PRIVATE;
-    String dato1;
-    TextView txt_usuario_deporte;
+    Button btn_regresar_deporte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,15 @@ public class DeporteActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_deporte);
 
-        txt_usuario_deporte = findViewById(R.id.txt_usuario_deporte);
+        btn_regresar_deporte = findViewById(R.id.btn_regresar_deporte);
+        btn_regresar_deporte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DeporteActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 }
